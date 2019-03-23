@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8"/>
+    <title>DESVN - Design</title>
+    <!-- Title icon -->
+    <link rel="icon" href="img/MainPage/LogoTitle.png" type="image/png" sizes="5x5"/>
+    <!-- Main page style -->
+    <link href="style/styleMain.css" type="text/css" rel="stylesheet"/>
+    <!-- About page style -->
+    <link href="style/styleAbout.css" type="text/css" rel="stylesheet"/>
+    <!-- fonts source -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Varela" rel="stylesheet">
+    <!-- icons source -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <header id="header">
+      <nav>
+        <div class="nav-list hide-nav">
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li><a onclick="document.getElementById('header').scrollIntoView(true);">STRONA GŁÓWNA</a></li>
+            <li><a onclick="document.getElementById('about').scrollIntoView(true);">O MNIE</a></li>
+            <li><a onclick="document.getElementById('projects').scrollIntoView(true);">REALIZACJE</a></li>
+            <li><a onclick="document.getElementById('cv').scrollIntoView(true);">CV</a></li>
+            <li><a onclick="document.getElementById('contact').scrollIntoView(true);">KONTAKT</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/MainPage/logo.png"/></a>
+      </div>
+      <div class="container-name">
+        <img class="desvn" style="width: 850px; opacity: 0;" src="img/MainPage/desvn.png"/>
+        <img class="design" style="margin-top: 50px; opacity: 0;" src="img/MainPage/design.png"/>
+      </div>
+      <div class="number-page-container">
+        <div class="number" style="color: white;">00</div>
+        <div class="number" style="color: white; opacity: 0;">01</div>
+        <div class="line-main"></div>
+        <div>04</div>
+      </div>
+      <div class="go-about down">
+        <a style="margin-bottom: 11px;" href="#about">O MNIE</a>
+        <img src="img/MainPage/arrow.png"/>
+      </div>
+      <div class="social">
+        <div>
+          <a class="social-icon" href="https://facebook.com/mateusz.bies.92" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-icon" href="https://www.instagram.com/biesmateusz/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.behance.net/desvn" target="_blank"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <article>
+
+      <section id="about">
+        <div class="lines-about">
+          <span class="line-about-1"></span>
+          <span class="line-about-2"></span>
+          <span class="line-about-3"></span>
+          <span class="line-about-4"></span>
+          <span class="line-about-5"></span>
+        </div>
+        <div class="about-title">
+          <div>O MNIE</div>
+        </div>
+        <div class="about-container">
+          <figure><img src="img/about/image.png"></figure>
+          <div class="about-content">
+            <div class="name">Mateusz Bieś</div>
+            <div class="specialization">Grafik Komputerowy<br>Polska, Kraków</div>
+            <span class="about-line"></span>
+            <div class="content">
+              Jestem grafikiem komputerowym i od dwóch lat zawodowo zajmuję się projektowaniem graficznym - stacjonarnie
+              oraz jako freelancer. Za sobą mam już mniejsze oraz większe projekty dla firm czy klientów indywidualnych.
+              Najczęściej zajmuję się projektowaniem stron internetowych, logotypów, banerów oraz identyfikacją wizualną.
+              <br>
+              Jeśli chciałbyś rozpocząć ze mną współpracę -
+              <br>
+              <strong>napisz do mnie.</strong>
+            </div>
+            <div class="about-contact">
+              <div class="about-contact-item"><img class="contact-image" src="img/about/phone.png"><a href="tel:+48733050252">+48 733 050 252</a></div>
+              <div class="about-contact-item"><img class="contact-image" src="img/about/mail.png"><a href="mailto:kontakt@desvn.pl">kontakt@desvn.pl</a></div>
+              <div class="about-contact-item"><img class="contact-image" src="img/about/behance.png"><a href="https://www.behance.net/desvn">/desvn</a></div>
+              <div class="about-contact-item"><img class="contact-image" src="img/about/localization.png">Polska, Kraków os. Zgody 4/16</div>
+            </div>
+          </div>
+        </div>
+        <div class="number-page-container2">
+          <div class="number" style="color: rgb(21,21,21);">01</div>
+          <div class="number" style="color: rgb(21,21,21); opacity: 0;">02</div>
+          <div class="line-main"></div>
+          <div>04</div>
+        </div>
+      </section>
+
+    </article>
+    <!-- Main page animation -->
+    <script src="scripts/scriptMain.js"></script>
+  </body>
+</html>
