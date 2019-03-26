@@ -1,0 +1,125 @@
+#projects{
+  position: relative;
+}
+
+.lines-projects{
+  width: 50%;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.lines-projects span{
+  position: absolute;
+  background-color: rgb(217,217,217);
+}
+
+.line-projects-1{
+  left: 70%;
+  top: -35px;
+  min-height: calc(100% + 35px);
+  width: 2px;
+}
+
+.line-projects-2{
+  left: 77%;
+  top: -35px;
+  min-height: calc(100% + 35px);
+  width: 2px;
+}
+
+.projects-title{
+  width: 100%;
+  min-height: 40px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  background-image: url("../img/projects/PORTFOLIO.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 16px;
+  font-family: Varela;
+  font-weight: bold;
+  color: rgb(14,164,217);
+
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+
+.projects-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.project{
+  width: 33.3%;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  display: flex;
+  /* div nie zmienia rozmiaru po przeskalowaniu img */
+  overflow: hidden;
+  order: 1;
+}
+
+.project img {
+  transition: all 0.4s;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project:hover{
+  cursor: pointer;
+}
+
+.figure-info{
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: rgb(27,27,27);
+  font-size: 20px;
+  top: 20px;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  transition: 0.3s;
+}
+
+.figure-info p{
+  margin: 0px 0px 0px 3px;
+}
+
+.info{
+  background-color: black;
+  width: 100%;
+  min-height: 200px;
+  display: none;
+}
+
+.number-page-container3{
+  background-color: white;
+  padding-left: 25px;
+  margin-top: 20px;
+  color: rgb(70,70,70);
+  width: 100%;
+  padding-top: 15px;
+
+  font-family: Varela;
+  font-weight: bold;
+  font-size: 10px;
+  z-index: 0;
+  order: 1;
+}
