@@ -31,11 +31,11 @@ function showSocialandTitles(){
   var desvn = document.getElementsByClassName("desvn")[0];
   var design = document.getElementsByClassName("design")[0];
   var social = document.getElementsByClassName("social")[0];
+  var header = document.getElementsByTagName("header")[0];
 
   desvn.style.opacity = 1;
-  desvn.style.marginTop = "-15px";
   design.style.opacity = 1;
-  design.style.marginTop = "35px";
+  design.style.paddingTop = "45px";
   social.style.opacity=1;
   social.style.marginBottom = "44px";
 }
@@ -127,6 +127,21 @@ function pageChange(){
     numbers[6].innerHTML = "02";
     numbers[7].innerHTML = "03";
   }
+
+  //page Contact
+  number = parseInt(numbers[8].textContent);
+  if(numbers[8].getBoundingClientRect().top-windowHeight > 0){
+    numbers[8].style.opacity=1;
+    numbers[8].style.marginTop = "0px";
+    numbers[9].style.opacity=0;
+    numbers[9].style.marginBottom = "0px";
+  }
+  if(numbers[8].getBoundingClientRect().top-windowHeight < -80){
+    numbers[8].style.opacity=0;
+    numbers[8].style.marginTop = "-15px";
+    numbers[9].style.opacity=1;
+    numbers[9].style.marginBottom = "15px";
+  }
 }
 
 function figureInfoShow(){
@@ -169,14 +184,31 @@ function isShow(){
   }
 }
 
-function showElements(){
+function showCV(){
   var windowHeight = window.innerHeight;
   var cv = document.getElementsByClassName("content-title")[0];
 
-  if(cv.getBoundingClientRect().top - windowHeight < -70){
+  if(cv.getBoundingClientRect().top - windowHeight < -100){
     cv.style.opacity = "1";
     cv.style.marginLeft = "0px";
 
+  }
+}
+
+function showFooterElements(){
+  var windowHeight = window.innerHeight;
+  var title = document.getElementsByClassName("content-title-contact")[0];
+  var content = document.getElementsByClassName("contact-info")[0];
+  var form = document.getElementsByClassName("mail-form")[0];
+
+  if(title.getBoundingClientRect().top - windowHeight < -100){
+    title.style.opacity = "1";
+  }
+
+  if(content.getBoundingClientRect().top - windowHeight < -250){
+    content.style.opacity = "1";
+    content.style.marginRight = "30px";
+    form.style.opacity = "1";
   }
 }
 
@@ -188,4 +220,6 @@ projects.forEach(project => project.addEventListener("click", infoShow));
 hamburger.addEventListener("click", showNav);
 window.addEventListener("load", showSocialandTitles);
 window.addEventListener("scroll",pageChange);
-window.addEventListener("scroll",showElements);
+window.addEventListener("scroll",showCV);
+
+window.addEventListener("scroll",showFooterElements);

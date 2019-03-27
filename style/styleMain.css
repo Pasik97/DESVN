@@ -11,6 +11,7 @@ header{
   background-color: black;
   background-attachment: fixed;
   min-height: 100vh;
+  max-height: 100vh;
   color: rgb(84,83,85);
   display: flex;
   flex-wrap: wrap;
@@ -148,6 +149,7 @@ header a:hover{
 .logo{
   margin: 0 auto;
   margin-top: 32px;
+  margin-bottom: 0px;
   align-self: flex-start;
 }
 
@@ -159,10 +161,16 @@ header a:hover{
   align-items: center;
   flex-direction: column;
   flex-basis: 100%;
+  position: relative;
 }
 
 .desvn, .design{
   transition: 1.5s;
+  position: absolute;
+}
+
+.desvn{
+  top: -40px;
 }
 
 .number-page-container, .go-about, .social{
@@ -229,4 +237,35 @@ header a:hover{
 
 .social-icon{
   margin-right: 34px;
+}
+
+footer{
+  background-image: url("../img/MainPage/footer-background.png");
+  color: rgb(224,224,224);
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+footer a{
+  color: rgb(15,183,242);
+  text-decoration: none;
+}
+
+.line-footer-1{
+  position: absolute;
+  background-color: rgb(58,58,58);
+  left: 40%;
+  top: 0%;
+  min-height: 100%;
+  width: 2px;
 }

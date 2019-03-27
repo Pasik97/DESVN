@@ -1,5 +1,7 @@
 #cvs{
   position: relative;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 .lines-cv{
@@ -39,28 +41,28 @@
 .line-cv-4{
   left: 85%;
   top: 50%;
-  min-height: 45%;
+  min-height: 35%;
   width: 2px;
 }
 
 .line-cv-5{
   left: 80%;
-  top: 89%;
+  top: 80%;
   min-height: 2px;
   width: 20%;
 }
 
 .line-cv-6{
   left: 85%;
-  top: 95%;
+  top: 85%;
   min-height: 2px;
   width: 15%;
 }
 
 .line-cv-7{
   left: 80%;
-  top: 89%;
-  min-height: 15%;
+  top: 80%;
+  min-height: 40%;
   width: 2px;
 }
 
@@ -92,16 +94,22 @@
   background-position: right;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px;
 }
 
 .cv-container figure{
+  max-width: 50%;
   margin-right: 1px;
   margin-left: 1px;
   padding-top: 10px;
   padding-left: 70px;
   z-index: 2;
+}
+
+.cv-container img{
+  max-width: 100%;
 }
 
 .content-title{
@@ -113,7 +121,7 @@
   text-shadow: 2px 0 0 currentColor;
 
   margin-bottom: 30px;
-  margin-top: 320px;
+
   left: 40px;
   z-index: 2;
 
@@ -124,7 +132,10 @@
 
 .cv-content{
   margin-left: 20px;
+  margin-bottom: 125px;
   z-index: 2;
+  align-self: flex-end;
+  justify-content: center;
 
   font-size: 16px;
   font-family: Varela;
@@ -166,6 +177,7 @@
 
 .number-page-container4{
   align-self: flex-start;
+  margin-top: 50px;
   margin-bottom: 30px;
   margin-left: 25px;
   display: flex;
