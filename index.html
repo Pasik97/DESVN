@@ -130,8 +130,8 @@
                   <div class="slide fade">
                     <img src="img/projects/Ganser2.png" style="width:100%">
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev"  >&#10094;</a>
+                  <a class="next"  >&#10095;</a>
                   <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -197,8 +197,8 @@
                     <div class="slide fade">
                       <img src="img/projects/Ganser2.png" style="width:100%">
                     </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev"  >&#10094;</a>
+                    <a class="next"  >&#10095;</a>
                     <div class="dot-container">
                       <span class="dot" onclick="currentSlide(1)"></span>
                       <span class="dot" onclick="currentSlide(2)"></span>
@@ -264,8 +264,8 @@
                   <div class="slide fade">
                     <img src="img/projects/Ganser2.png" style="width:100%">
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev"  >&#10094;</a>
+                  <a class="next"  >&#10095;</a>
                   <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -331,11 +331,15 @@
                   <div class="slide fade">
                     <img src="img/projects/Ganser2.png" style="width:100%">
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <div class="slide fade">
+                    <img src="img/projects/Ganser.png" style="width:100%">
+                  </div>
+                  <a class="prev"  >&#10094;</a>
+                  <a class="next"  >&#10095;</a>
                   <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                   </div>
                 </div>
                 <div class="content-info-container">
@@ -378,7 +382,8 @@
                     <div class="number-photo">
                       <div class="display-photo">01</div>
                       <div class="display-photo">02</div>
-                      <div class="number-of-photos">/ 02</div>
+                      <div class="display-photo">03</div>
+                      <div class="number-of-photos">/ 03</div>
                     </div>
                     <a href="https://ganser-lab.com/pl/o-nas/">ganser-lab.com</a>
                   </div>
@@ -398,8 +403,8 @@
                   <div class="slide fade">
                     <img src="img/projects/Ganser2.png" style="width:100%">
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev"  >&#10094;</a>
+                  <a class="next"  >&#10095;</a>
                   <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -465,8 +470,8 @@
                   <div class="slide fade">
                     <img src="img/projects/Ganser2.png" style="width:100%">
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev"  >&#10094;</a>
+                  <a class="next"  >&#10095;</a>
                   <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -520,6 +525,10 @@
               </div>
             </div>
           </figure>
+          <div class="modal">
+            <span class="closeModal">&times;</span>
+            <img class="modal-content">
+          </div>
           <div class="number-page-container3">
             <div class="number" style="color: rgb(21,21,21); margin-left: 25px;">01</div>
             <div class="number" style="color: rgb(21,21,21); opacity: 0; margin-left: 25px;">02</div>
@@ -585,13 +594,15 @@
                 <a class="contact-icon" href="https://www.behance.net/desvn" target="_blank"><i class="fab fa-behance"></i></a>
               </div>
             </div>
-            <form class="mail-form" method="post">
+            <form class="mail-form" action="./scripts/mailSender.php" method="post" onsubmit="return validate(this);">
               <input style="width: 47%; margin-right: 6%;" type="text" name="name" placeholder="Imię"><input style="width: 47%;" type="text" name="phone-number" placeholder="Numer telefonu"><br>
               <input type="text" name="mail" placeholder="Adres e-mail"><br>
-              <input type="text" name="comment" placeholder="Twoja wiadomość"><br><br>
+              <textarea style="padding-bottom: 120px;" type="text" name="comment" placeholder="Twoja wiadomość"></textarea><br><br>
+              <div class="validate">.</div>
               <input class="button-send" type="submit" value="WYŚLIJ">
             </form>
           </div>
+
         </div>
         <div class="number-page-container4">
           <div class="number" style="color: white; margin-left: 25px;">03</div>

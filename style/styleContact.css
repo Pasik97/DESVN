@@ -170,7 +170,7 @@
   width: 80%;
 }
 
-.mail-form input{
+.mail-form input, textarea{
   background-color: inherit;
   border: none;
   border-bottom: 1px solid rgb(123,123,123);
@@ -179,13 +179,10 @@
   font-size: 15px;
   width: 100%;
   font-family: Montserrat;
+  color: white;
 }
 
-.mail-form input:nth-child(6){
-  padding-bottom: 120px;
-}
-
-.mail-form input:focus{
+.mail-form input:focus, textarea:focus{
   outline: none;
   color: white !important;
   border-bottom: 1px solid white;
@@ -208,13 +205,26 @@
 
   transition: 0.3s;
 
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .mail-form input:last-child:hover{
   background-color: rgb(15,183,242);
   color: white;
   cursor: pointer;
+}
+
+.wrongData::-webkit-input-placeholder {
+    color: red;
+ }
+
+.validate{
+  color: red;
+  margin-left: 51%;
+  font-size: 1vw;
+  z-index: 1;
+  margin-left: 0px;
+  opacity: 0;
 }
 
 .number-page-container4{

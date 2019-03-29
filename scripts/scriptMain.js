@@ -212,37 +212,23 @@ function showFooterElements(){
   }
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function closeInfo(){
+  var infos = document.getElementsByClassName("info");
+  var projectPhotos = document.getElementsByClassName("project-photo");
+  var projectFigureInfo = document.getElementsByClassName("figure-info");
+  var allProjects = document.getElementsByClassName("project");
   var i;
-  var carousel = document.getElementsByClassName("carousel");
-  var nPhoto = document.getElementsByClassName("number-photo");
-  var slides = carousel[0].getElementsByClassName("slide");
-  var slideNumber = nPhoto[0].getElementsByClassName("display-photo");
-  var dots = carousel[0].getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      slideNumber[i].style.display = "none";
+  for(i=0; i<infos.length;i++){
+    infos[i].style.display = "none";
+    projectPhotos[i].style.display = "flex";
+    projectFigureInfo[i].style.display = "block";
+    allProjects[i].style.order = "1";
+    allProjects[i].style.flexBasis = "auto";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  slideNumber[slideIndex-1].style.display = "block";
 }
+
+var closeButtonsInfo = document.querySelectorAll(".info-close-button");
+closeButtonsInfo.forEach(button => button.addEventListener("click", closeInfo));
 
 projects.forEach(project => project.addEventListener("mousemove", figureInfoShow));
 projects.forEach(project => project.addEventListener("mouseout", figureInfoHide));
@@ -255,3 +241,117 @@ window.addEventListener("scroll",pageChange);
 window.addEventListener("scroll",showCV);
 
 window.addEventListener("scroll",showFooterElements);
+
+projects.forEach(project => project.addEventListener("click", displaySlides));
+var slideIndex = 1;
+
+function displaySlides(){
+  var carousel = this.querySelectorAll(".carousel")[0];
+  var slideNumber = this.querySelectorAll(".display-photo");
+
+  var next = carousel.querySelectorAll(".next")[0];
+  next.addEventListener("click",plusSlides(1));
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  showSlides();
+
+  function showSlides(n) {
+    var i;
+    var nPhoto = carousel.getElementsByClassName("number-photo");
+    var slides = carousel.getElementsByClassName("slide");
+    var dots = carousel.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slideNumber[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].classList.add("active");
+    slideNumber[slideIndex-1].style.display = "block";
+  }
+}
+
+var modal = document.getElementsByClassName('modal')[0];
+
+var slides = document.getElementsByClassName("slide");
+var modalImg = document.getElementsByClassName("modal-content")[0];
+function showSlideBig(){
+  modal.style.display = "block";
+  modalImg.src = this.getElementsByTagName('img')[0].src;
+}
+
+var closeModal = document.getElementsByClassName("closeModal")[0];
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+var i=0;
+for(i=0; i<slides.length-1;i++){
+  slides[i].addEventListener("click", showSlideBig);
+}
+
+function validate(form){
+  var name = document.getElementsByName("name");
+  var phoneNumber = document.getElementsByName("phone-number");
+  var mail = document.getElementsByName("mail");
+  var comment = document.getElementsByName("comment");
+  var validateInfo = document.getElementsByClassName("validate")[0];
+  var messageStart = "Następujące pola wymagają uzupełnienia: ";
+  var message = "Następujące pola wymagają uzupełnienia: ";
+
+  if(name[0].value == ""){
+    message = message + "Imię, "
+    name[0].style.borderColor = "red";
+    name[0].classList.add("wrongData");
+  }else{
+    name[0].style.borderColor = "white";
+    name[0].classList.remove("wrongData");
+  }
+
+  if(phoneNumber[0].value == ""){
+    message = message + "Numer telefonu, "
+    phoneNumber[0].style.borderColor = "red";
+    phoneNumber[0].classList.add("wrongData");
+  }else{
+    phoneNumber[0].style.borderColor = "white";
+    phoneNumber[0].classList.remove("wrongData");
+  }
+
+  if(mail[0].value == ""){
+    message = message + "Adres e-mail, "
+    mail[0].style.borderColor = "red";
+    mail[0].classList.add("wrongData");
+  }else{
+    mail[0].style.borderColor = "white";
+    mail[0].classList.remove("wrongData");
+  }
+
+  if(comment[0].value == ""){
+    message = message + "Twoja wiadomość "
+    comment[0].style.borderColor = "red";
+    comment[0].classList.add("wrongData");
+  }else{
+    comment[0].style.borderColor = "white";
+    comment[0].classList.remove("wrongData");
+  }
+
+  if(message != messageStart){
+    validateInfo.style.opacity = "1";
+    validateInfo.innerHTML = ""+message;
+    return false;
+  }else{
+    validateInfo.style.opacity = "0";
+  }
+  return true;
+
+}

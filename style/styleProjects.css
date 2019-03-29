@@ -70,9 +70,11 @@
   order: 1;
 }
 
-.project-photo img {
-  width: 100%;
-  height: 100%;
+.project-photo{
+  align-self: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  height: auto;
   transition: all 0.4s;
 }
 
@@ -238,6 +240,10 @@
   max-width: 38px;
 }
 
+.info-close-button{
+  cursor: pointer;
+}
+
 .info-close-button span{
   position: absolute;
   right: 15px;
@@ -248,7 +254,7 @@
   min-width: 20px;
   background-color: white;
 
-  margin: 12px 7px 12px 7px;
+  margin: 20px 30px 20px 30px;
 }
 
 .info-close-button span:first-child{
@@ -361,5 +367,44 @@
 .info-footer a:hover{
   background-color: rgb(15,183,242);
   color: white;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 150px;
+  overflow: auto;
+
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 30px;
+  right: 55px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeModal:hover {
+  color: rgb(93,93,93);
   cursor: pointer;
 }
