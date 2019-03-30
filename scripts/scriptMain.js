@@ -32,7 +32,10 @@ function showSocialandTitles(){
 
   desvn.style.opacity = 1;
   design.style.opacity = 1;
-  design.style.paddingTop = "45px";
+  if(window.innerWidth > 1000)
+    design.style.paddingTop = "45px";
+  else
+    design.style.paddingTop = "15px";
   social.style.opacity=1;
   social.style.marginBottom = "44px";
 }

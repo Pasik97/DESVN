@@ -4,6 +4,10 @@
     background-position: center;
   }
 
+  .design{
+    padding-top: 30px;
+  }
+
   .go-about, .number-page-container{
     opacity: 0;
   }
@@ -40,6 +44,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
+    font-size: 2.9vw;
   }
 
   .number-page-container2{
