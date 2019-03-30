@@ -1,3 +1,4 @@
 # DESVN
 
-WebPage designed by my friend. Writed using only HTML5, CSS3 and JavaScript
+WebPage designed by my friend. Writed using only HTML5, CSS3 and JavaScript.
+WebPage was tested on Chrome and mobile Safari browser.

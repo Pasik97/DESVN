@@ -594,7 +594,8 @@
                 <a class="contact-icon" href="https://www.behance.net/desvn" target="_blank"><i class="fab fa-behance"></i></a>
               </div>
             </div>
-            <form class="mail-form" action="./scripts/mailSender.php" method="post" onsubmit="return validate(this);">
+            <!-- Add action -->
+            <form class="mail-form" method="post" onsubmit="return validate(this);">
               <input style="width: 47%; margin-right: 6%;" type="text" name="name" placeholder="Imię"><input style="width: 47%;" type="text" name="phone-number" placeholder="Numer telefonu"><br>
               <input type="text" name="mail" placeholder="Adres e-mail"><br>
               <textarea style="padding-bottom: 120px;" type="text" name="comment" placeholder="Twoja wiadomość"></textarea><br><br>
@@ -619,7 +620,13 @@
       <span>Webdesign by <a href=".">DESVN</a></span>
       <span>Coded by <a href="https://github.com/Pasik97">Pasik97</a></span>
     </footer>
-    <!-- Main page animation -->
+    <!-- Main page animation and Whole Page animation-->
     <script src="scripts/scriptMain.js"></script>
+    <!-- Projects page animation -->
+    <script src="scripts/scriptProjects.js"></script>
+    <!-- CV page animation -->
+    <script src="scripts/scriptCV.js"></script>
+    <!-- Contact page animation -->
+    <script src="scripts/scriptContact.js"></script>
   </body>
 </html>

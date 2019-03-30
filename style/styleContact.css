@@ -173,6 +173,7 @@
 .mail-form input, textarea{
   background-color: inherit;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid rgb(123,123,123);
   padding-top: 25px;
   padding-bottom: 15px;
@@ -180,6 +181,8 @@
   width: 100%;
   font-family: Montserrat;
   color: white;
+  /* inny wyglad na moblinym */
+  -webkit-appearance: none;
 }
 
 .mail-form input:focus, textarea:focus{
