@@ -66,7 +66,8 @@ function showFooterElements(){
 
   if(content.getBoundingClientRect().top - windowHeight < -250){
     content.style.opacity = "1";
-    content.style.marginRight = "30px";
+    if(window.innerWidth > 1200)
+      content.style.marginRight = "30px";
     form.style.opacity = "1";
   }
 }

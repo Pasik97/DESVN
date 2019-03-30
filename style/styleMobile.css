@@ -1,0 +1,188 @@
+@media only screen and (max-width: 600px) {
+  /* Main Page */
+  header{
+    background-position: center;
+  }
+
+  .go-about, .number-page-container{
+    opacity: 0;
+  }
+
+  /* About Page */
+  .lines-about{
+    display: none;
+  }
+
+  #about{
+    min-height: auto;
+  }
+
+  .about-title{
+    margin-bottom: 80px;
+  }
+
+  .about-container{
+    flex-direction: column;
+  }
+
+  .about-container figure{
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .about-content{
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
+  }
+
+  .content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .number-page-container2{
+    display: none;
+  }
+
+  /* Projects Page */
+  #projects{
+    min-height: 100vh;
+    margin-top: 100px;
+  }
+
+  .lines-projects{
+    display: none;
+  }
+
+  .projects-container{
+    flex-direction: column;
+  }
+
+  .project{
+    min-width: 100%;
+  }
+
+  .info-container{
+    flex-direction: column;
+  }
+
+  .content-info-container{
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .content-info-title{
+    font-size: 5vw;
+  }
+
+  .content-info-subtitle{
+    font-size: 2.4vw;
+  }
+
+  .info-content{
+    font-size: 2.6vw;
+    line-height: 4vw;
+  }
+
+  .info-details-container{
+    flex-wrap: wrap;
+    max-height: 250px;
+    margin-bottom: 50px;
+  }
+
+  .info-footer{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    bottom: 0%;
+    margin-bottom: 40px;
+  }
+
+  .detail{
+    font-size: 2.4vw;
+  }
+
+  .carousel{
+    min-width: 100%;
+  }
+
+  .number-photo{
+    display: none;
+  }
+
+  .number-page-container3{
+    display: none;
+  }
+
+  /* CV Page */
+  #cvs{
+    min-height: auto;
+  }
+
+  .lines-cv{
+    display: none;
+  }
+
+  .cv-container{
+    flex-direction: column;
+  }
+
+  .cv-container figure{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    margin-top: 50px;
+  }
+
+  .cv-content{
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .number-page-container4{
+    display: none;
+  }
+
+  /* Contact Page */
+  .lines-contact{
+    display: none;
+  }
+
+  .content-title-contact{
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .contact-content{
+    flex-direction: column;
+  }
+
+  .contact-info{
+    margin: 0 auto;
+    margin-top: 60px;
+    min-width: auto;
+    max-width: auto;
+  }
+
+  .mail-form{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .mail-form input:last-child{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 34%;
+  }
+  /* Footer */
+  .line-footer-1{
+    display: none;
+  }
+}

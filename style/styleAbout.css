@@ -9,7 +9,7 @@
 }
 
 .about-title{
-  width: 100%;
+  min-width: 100%;
   min-height: 40px;
   background-image: url("../img/about/background-title.png");
   background-repeat: no-repeat;
