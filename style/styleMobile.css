@@ -1,4 +1,7 @@
 @media only screen and (max-width: 500px) {
+  html{
+    max-width: 100%;
+  }
   /* Main Page */
   header{
     -webkit-background-position: center center;
@@ -21,6 +24,7 @@
 
   #about{
     min-height: auto;
+    max-width: 100%;
   }
 
   .about-title{
