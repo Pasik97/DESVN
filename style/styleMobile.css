@@ -172,7 +172,7 @@
   .cv-content{
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     text-align: center;
     align-items: center;
   }
@@ -201,10 +201,8 @@
     margin: 0 auto;
     margin-top: 60px;
     min-width: auto;
-    max-width: auto;
+    max-width: 100%;
     text-align: center;
-    min-width: 30%;
-    max-width: 30%;
   }
 
   .mail-form{
