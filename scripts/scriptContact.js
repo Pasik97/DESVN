@@ -66,10 +66,11 @@ function showFooterElements(){
 
   if(content.getBoundingClientRect().top - windowHeight < -250){
     content.style.opacity = "1";
-    if(window.innerWidth > 1200)
+    if(window.innerWidth > 600)
       content.style.marginRight = "30px";
     form.style.opacity = "1";
   }
+
 }
 
 window.addEventListener("scroll",showFooterElements);
