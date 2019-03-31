@@ -4,9 +4,10 @@
   }
   /* Main Page */
   header{
-    -webkit-background-position: center center;
-    -webkit-background-size: center center;
-    background-position: center center;
+    background-attachment: initial;
+    background-position: top center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
   }
 
   .container-name{
