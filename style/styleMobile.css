@@ -1,8 +1,8 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   /* Main Page */
   header{
     -webkit-background-position: center;
-    -webkit-background-size: auto;
+    -webkit-background-size: cover;
     background-position: center;
   }
 
@@ -40,6 +40,10 @@
     margin: 0 auto;
     margin-top: 50px;
     padding: 0;
+  }
+
+  .name{
+    font-size: 10vw;
   }
 
   .content{
@@ -167,6 +171,8 @@
 
   .contact-content{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-info{
@@ -174,6 +180,9 @@
     margin-top: 60px;
     min-width: auto;
     max-width: auto;
+    text-align: center;
+    min-width: 30%;
+    max-width: 30%;
   }
 
   .mail-form{
